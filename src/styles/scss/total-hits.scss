@@ -1,0 +1,56 @@
+@import "./breakpoints.scss";
+@import "./colors.scss";
+@import "./fonts.scss";
+
+.short-total-hits {
+  background-color: $color-third;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  padding: 40px 80px;
+
+  &::after {
+    content: "";
+    border-top: $color-fourth 25px solid;
+    border-left: transparent 25px solid;
+    border-bottom: transparent 25px solid;
+    border-right: transparent 25px solid;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: $font-primary;
+    color: $color-primary;
+    font-size: $h1-small-size;
+  }
+
+  div {
+    background: $color-fourth;
+    height: 40px;
+    width: 140px;
+    margin: 15px auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .short-total-searched {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: $h1-small-size;
+    background: none;
+    text-align: center;
+    color: $color-primary;
+    border-radius: 4px;
+  }
+
+  .short-clicks {
+    font-size: $text-small-size;
+    text-align: center;
+    font-family: $font-second;
+    color: $color-second;
+  }
+}
