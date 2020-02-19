@@ -6,7 +6,7 @@
   "author": "Diego Azevedo <dapptn@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --mode development",
+    "dist": "webpack --mode development",
     "start": "webpack-dev-server --mode development"
   },
   "devDependencies": {
