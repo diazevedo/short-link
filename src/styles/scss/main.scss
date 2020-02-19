@@ -1,0 +1,10 @@
+$h3-bg-color: red;
+
+body {
+  background-image: url("../../assets/background-home.jpg");
+}
+
+h3 {
+  background-color: $h3-bg-color;
+  user-select: none;
+}
