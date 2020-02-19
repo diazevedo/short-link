@@ -1,0 +1,15 @@
+@import "./colors.scss";
+
+header {
+  width: 100vw;
+  height: 50px;
+  background-color: $color-fourth;
+  overflow: hidden;
+
+  img {
+    width: 100px;
+    height: 25px;
+    display: block;
+    margin: 12px auto;
+  }
+}
