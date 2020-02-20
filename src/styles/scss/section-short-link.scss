@@ -3,25 +3,16 @@
 @import "./breakpoints.scss";
 
 .short-link {
-  height: 300px;
   width: 100%;
+
+  // height: 30%;
+  min-height: 480px;
+  // max-height: 480px;
   background-image: url("../../assets/background-home.jpg");
   background-size: 100% 100%;
   background-position: center;
   position: relative;
   background-repeat: no-repeat;
-
-  @include sm {
-    height: 360px;
-  }
-
-  @include md {
-    height: 400px;
-  }
-
-  @include lg {
-    height: 480px;
-  }
 
   article {
     width: 100%;
@@ -83,7 +74,7 @@
       border: none;
       font-size: $text-small-size;
       font-family: $font-second;
-      color: $color-fourth;
+      color: $color-fifth;
       border-bottom: $color-fifth 1px solid;
       box-sizing: border-box;
       position: relative;
@@ -102,6 +93,7 @@
 
       &:focus {
         transform: scaleY(1.2);
+        outline: none;
       }
     }
 
@@ -118,6 +110,16 @@
       margin-top: 15px;
       box-sizing: border-box;
       margin-left: 0;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:active {
+        transform: translateY(4px);
+      }
+
+      &:focus {
+        outline: 0 !important;
+      }
 
       @include ssm {
         height: 50px;
