@@ -7,3 +7,4 @@ import "./styles/scss/total-hits.scss";
 import "./styles/scss/footer.scss";
 
 import "./js/topHits";
+import "./js/shortener";
