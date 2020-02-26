@@ -21,11 +21,16 @@
         </p>
 
         <form id="form">
-          <input type="text" name="url" placeholder="Cole o seu link aqui" />
+          <input
+            type="text"
+            name="url"
+            placeholder="Cole o seu link aqui"
+            value="globo.com"
+          />
           <div>
-            <button id="button-shortener" type="submit">encurtar</button>
-            <button id="button-copy" class="hidden" type="button">
-              copiar
+            <button id="button" type="submit" class="shortener">
+              <span id="span-shortener">encurtar</span>
+              <span id="span-copy" class="hidden">copy</span>
             </button>
           </div>
         </form>
