@@ -8,3 +8,4 @@ import "./styles/scss/footer.scss";
 
 import "./js/topHits";
 import "./js/shortener";
+import "./js/buttoncopy";

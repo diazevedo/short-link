@@ -19,8 +19,6 @@
   };
 
   $form.addEventListener("submit", event => {
-    console.log("sdsd");
-
     event.preventDefault();
 
     xhr.open(
