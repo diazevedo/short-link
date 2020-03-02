@@ -1,11 +1,29 @@
 @import "./colors.scss";
+@import "./fonts.scss";
+
 
 footer {
-  width: 100vw;
-  // height: 50px;
+  width: 100%;
   position: relative;
   bottom: 0;
-  height: 60px;
-  background-color: $color-primary;
+  height: 53px;
+  background-color: $color-fourth;
   overflow: hidden;
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-size: $text-bigger;
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  ul {
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
