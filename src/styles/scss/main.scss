@@ -1,4 +1,8 @@
 @import "./base/reset.scss";
+@import "./base/fonts.scss";
+@import "./base/colors.scss";
+@import "./base/breakpoints.scss";
+
 @import "./components/header.scss";
 @import "./components/section-short-link.scss";
 @import "./components/top-hits.scss";

@@ -22,7 +22,7 @@ module.exports = {
     new MiniCssExtractPlugin({ filename: "style.css" }),
     new CleanWebpackPlugin()
   ],
-  resolve: { extensions: [".js"] },
+  resolve: { extensions: [".js", ".scss"] },
   module: {
     rules: [
       {
@@ -44,10 +44,20 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
+
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/images"
+              outputPath: "assets/images",
+              esModule: false
             }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
           }
         ]
       }
