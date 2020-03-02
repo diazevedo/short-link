@@ -4,68 +4,79 @@
 
 .short-link {
   width: 100%;
+  // height: 42.5%;
+  height: 450px;
 
-  height: 41%;
-  min-height: 330px;
-  max-height: 483px;
-  
+  // max-height: 350px;
+  // min-height: 330px;
+  // max-height: 482px;
+
   background-image: url("../../assets/img/background-home.jpg");
   background-size: 100% 100%;
   background-position: center;
   position: relative;
   background-repeat: no-repeat;
 
-  article {
-    border: 1px solid black;
+  .container {
     width: 100%;
-    max-width: 460px;
-    height: auto;    
-    padding: 0px 20px;
-    position: relative;
-    // left: 50%;
+    max-width: 458px;
+    height: auto;
+    min-height: 175px;
+    padding: 0 30px;
+    position: absolute;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    /*instead of defining a line-height of 0.8 decided to control the margin-top of the h1 from here*/
+    transform: translate(-50%, -52%);
 
-    @include sm {
-      height: 180px;
+    @include md {
       padding: 0;
     }
 
-    h1 {
-      color: $color-fourth;
-      font-size: $h1-normal-size;
-      font-family: $font-primary;
-      font-weight: bold;
-      text-align: center;
+    .text {
+      h1 {
+        color: $color-fourth;
+        font-size: $h1-big-size;
+        font-family: $font-primary;
+        font-weight: bold;
+        text-align: center;
 
-      @include sm {
-        font-size: $h1-normal-size;
+        @include sm {
+          font-size: $h1-normal-size;
+          // line-height: 30px;
+        }
       }
-    }
 
-    p {
-      font-size: $text-medium-size;
-      color: $color-fourth;
-      text-align: center;
-      font-family: $font-second;
-      line-height: 24px;
-      margin-top: 16px;
-      font-weight: 300;
+      p {
+        font-size: $text-medium-x-size;
+        color: $color-fourth;
+        text-align: center;
+        font-family: $font-second;
+        line-height: 30px;
+        margin-top: 16px;
+        font-weight: 300;
 
-      @include sm {
-        font-size: $text-size;
-        font-weight: 400;
+        @include sm {
+          font-size: $text-medium-x-size;
+          font-weight: 300;
+          margin-top: 20px;
+        }
       }
     }
 
     form {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 40px;
       box-sizing: border-box;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-      @include ssm {
-        margin-top: 20px;
+      @include md {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: 30px;
+        margin-top: 45px;
       }
 
       input {
@@ -76,20 +87,19 @@
         font-size: $text-medium-size;
         font-family: $font-second;
         color: $color-fifth;
-        border-bottom: $color-fifth 1px solid;
+        border-bottom: $color-fifth 2px solid;
         box-sizing: border-box;
-        position: relative;
         font-weight: 400;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &.searched {
           color: $color-fourth;
         }
 
-        @include sm {
+        @include md {
           width: 330px;
+          width: 100%;
           height: 40px;
-          top: -2px;
         }
 
         &::placeholder {
@@ -97,7 +107,7 @@
         }
 
         &:focus {
-          transform: scaleY(1.2);
+          // font-size: $text-big;
           outline: none;
         }
       }
@@ -107,7 +117,7 @@
         border: none;
         width: 100%;
         height: 50px;
-        font-size: $text-size;
+        font-size: $text-medium-x-size;
         font-family: $font-second;
         font-weight: 400;
         color: $color-fourth;
@@ -117,10 +127,12 @@
         margin-left: 0;
         cursor: pointer;
         position: relative;
-        // top: 15px;
+        margin-top: 20px;
+        padding: 20px;
 
-        //new
-        margin-top: 15px;
+        @include md {
+          margin-top: 0;
+        }
 
         span {
           position: absolute;
@@ -132,7 +144,7 @@
         span.hidden {
           visibility: hidden;
         }
-        
+
         span.fade-out {
           animation: fadeOut 0.2s ease-in-out forwards;
         }
@@ -188,7 +200,7 @@
           height: 50px;
         }
 
-        @include sm {
+        @include md {
           width: 108px;
           height: 40px;
           margin-left: 5px;

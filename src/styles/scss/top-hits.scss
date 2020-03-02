@@ -4,49 +4,56 @@
 
 .short-top-hits {
   height: 30%;
-  min-height: 300px;
-  max-height: 347px;
+  min-height: 360px;
   padding: 30px 40px 0;
   width: 100%;
   background-color: $color-fourth;
 
-  @include sm {
-    // margin-top: 40px;
-  }
-
   h2 {
     text-transform: uppercase;
     text-align: center;
-    line-height: $h1-small-size;
+    line-height: $h1-normal-size;
     font-family: $font-primary;
     color: $color-primary;
-    font-size: $h1-small-size;
+    font-size: $h1-normal-size;
+
+    @include md {
+      margin-top: 15px;
+      font-size: $h1-medium-size;
+    }
   }
 
   ul {
-    margin: 20px auto 0;
+    margin: 30px auto 0;
     width: 100%;
     max-width: 370px;
+
+    @include md {
+      margin-top: 20px;
+    }
   }
 
   li {
-    height: 35px;
+    height: 45px;
     display: flex;
     justify-content: space-between;
-    line-height: 35px;
+    line-height: 2.5;
     letter-spacing: 1px;
-
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
+    font-size: $text-medium-x-size;
 
     &:last-child {
-      // border: none;
+      border: none;
+    }
+
+    @include md {
+      height: 40px;
     }
 
     a {
       font-family: $font-second;
       color: $color-primary;
       font-weight: 700;
-      font-size: $text-small-size;
       text-decoration: none;
     }
 
@@ -54,7 +61,6 @@
       font-family: $font-second;
       color: $color-second;
       font-weight: 300;
-      font-size: $text-small-size;
     }
   }
 }

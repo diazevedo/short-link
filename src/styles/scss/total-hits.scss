@@ -5,11 +5,10 @@
 .short-total-hits {
   background-color: $color-third;
   height: 20%;
-  min-height: 200px;
-  max-height: 223px;
+  min-height: 260px;
   width: 100%;
   position: relative;
-  padding: 5.5rem 6rem 0;
+  padding: 80px 6rem 0;
 
   &::after {
     content: "";
@@ -28,32 +27,37 @@
     text-align: center;
     font-family: $font-primary;
     color: $color-primary;
-    font-size: $h1-small-size;
-  }
+    font-size: $h1-normal-size;
 
-  div {
-    background: $color-fourth;
-    height: 40px;
-    width: 140px;
-    margin: 15px auto 10px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    @include md {
+      font-size: $h1-medium-size;
+    }
   }
 
   .short-total-searched {
+    background: $color-fourth;
     font-family: $font-primary;
-    font-weight: 400;
-    font-size: $h1-small-size;
-    background: none;
+    font-weight: 300;
+    padding: 10px;
+    font-size: $h1-medium-size;
+    margin: 20px auto 10px;
+    line-height: 0.9;
     text-align: center;
     color: $color-primary;
+    width: 173px;
+    border: 1px solid #d2d2d2;
     border-radius: 4px;
   }
 
   .short-clicks {
-    font-size: $text-small-size;
+    font-size: $text-medium-x-size;
+    font-weight: 300;
     text-align: center;
     font-family: $font-second;
     color: $color-second;
+
+    @include md {
+      font-weight: 300;
+    }
   }
 }

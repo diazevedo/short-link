@@ -1,18 +1,25 @@
 @import "./colors.scss";
 @import "./fonts.scss";
-
+@import "./breakpoints.scss";
 
 footer {
   width: 100%;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
   position: relative;
   bottom: 0;
-  height: 53px;
+  height: 60px;
   background-color: $color-fourth;
   overflow: hidden;
-  padding: 0px 40px;
+  // padding: 0px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+
+  @include md {
+    justify-content: space-between;
+  }
 
   a {
     font-size: $text-bigger;
