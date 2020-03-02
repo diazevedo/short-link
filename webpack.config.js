@@ -11,7 +11,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Shorten URL",
       template: "./src/index.html",
       inject: true,
       minify: {
