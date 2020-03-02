@@ -3,6 +3,8 @@
 
   const topFive = require("../assets/urls.json");
 
+  const topFiveSorted = topFive.sort((a, b) => a.hits < b.hits);
+
   function addItemList(item) {
     let $li = document.createElement("li");
     let a = document.createElement("a");
@@ -18,6 +20,6 @@
   }
 
   for (let i = 0; i < 5; i++) {
-    addItemList(topFive[i]);
+    addItemList(topFiveSorted[i]);
   }
 })();
