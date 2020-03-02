@@ -6,7 +6,7 @@
   height: 30%;
   min-height: 300px;
   max-height: 347px;
-  padding: 50px 40px;
+  padding: 30px 40px 0;
   width: 100%;
   background-color: $color-fourth;
 
@@ -24,16 +24,16 @@
   }
 
   ul {
-    margin: 20px auto 10px auto;
+    margin: 20px auto 0;
     width: 100%;
     max-width: 370px;
   }
 
   li {
-    height: 30px;
+    height: 35px;
     display: flex;
     justify-content: space-between;
-    line-height: 28px;
+    line-height: 35px;
     letter-spacing: 1px;
 
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
