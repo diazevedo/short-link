@@ -4,44 +4,48 @@
 
 .short-top-hits {
   height: 30%;
-  min-height: 250px;
-  max-height: 340px;
-  margin-top: 20px;
-  padding: 0 20px;
+  min-height: 300px;
+  max-height: 347px;
+  padding: 50px 40px;
   width: 100%;
+  background-color: $color-fourth;
 
   @include sm {
-    margin-top: 30px;
+    // margin-top: 40px;
   }
 
   h2 {
     text-transform: uppercase;
     text-align: center;
+    line-height: $h1-small-size;
     font-family: $font-primary;
     color: $color-primary;
     font-size: $h1-small-size;
   }
 
   ul {
-    padding: 15px 0;
+    margin: 20px auto 10px auto;
+    width: 100%;
     max-width: 370px;
-    margin: 0px auto;
   }
 
   li {
+    height: 30px;
     display: flex;
     justify-content: space-between;
-    line-height: 32px;
+    line-height: 28px;
+    letter-spacing: 1px;
+
     border-bottom: 0.2px solid rgba(0, 0, 0, 0.2);
 
     &:last-child {
-      border: none;
+      // border: none;
     }
 
     a {
       font-family: $font-second;
       color: $color-primary;
-      font-weight: 400;
+      font-weight: 700;
       font-size: $text-small-size;
       text-decoration: none;
     }

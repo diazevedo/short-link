@@ -4,19 +4,19 @@
 
 .short-total-hits {
   background-color: $color-third;
-
-  height: 25%;
+  height: 20%;
   min-height: 200px;
+  max-height: 223px;
   width: 100%;
   position: relative;
-  padding: 52px 80px 0 80px;
+  padding: 5.5rem 6rem 0;
 
   &::after {
     content: "";
-    border-top: $color-fourth 25px solid;
-    border-left: transparent 25px solid;
-    border-bottom: transparent 25px solid;
-    border-right: transparent 25px solid;
+    border-top: $color-fourth 33px solid;
+    border-left: transparent 33px solid;
+    border-bottom: transparent 33px solid;
+    border-right: transparent 33px solid;
     position: absolute;
     top: 0;
     right: 50%;
@@ -35,8 +35,9 @@
     background: $color-fourth;
     height: 40px;
     width: 140px;
-    margin: 15px auto;
+    margin: 15px auto 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
   }
 
   .short-total-searched {
