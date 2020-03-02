@@ -1,6 +1,6 @@
-@import "./breakpoints.scss";
-@import "./colors.scss";
-@import "./fonts.scss";
+@import "../base/breakpoints.scss";
+@import "../base/colors.scss";
+@import "../base/fonts.scss";
 
 .short-total-hits {
   background-color: $color-third;

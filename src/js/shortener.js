@@ -9,6 +9,8 @@
 
   const $button = document.querySelector("#button");
 
+  const keysAllowed = [17, 67, 88];
+
   const xhr = new XMLHttpRequest();
 
   xhr.onload = function() {
@@ -19,39 +21,48 @@
     }
   };
 
+  function toogleShorterner() {
+    $button.classList.remove("copy");
+    $button.classList.add("shortener");
+
+    $spanShortener.classList.add("fade-in");
+    $spanShortener.classList.remove("fade-out");
+
+    $spanCopy.classList.add("fade-out");
+    $spanCopy.classList.remove("fade-in");
+
+    $input.classList.toggle("searched");
+  }
+
+  function toggleCopy() {
+    $button.classList.add("copy");
+    $button.classList.remove("shortener");
+
+    $spanShortener.classList.add("fade-out");
+    $spanShortener.classList.remove("fade-in");
+
+    $spanCopy.classList.add("fade-in");
+    $spanCopy.classList.remove("fade-out");
+
+    $spanShortener.classList.add("hidden");
+
+    $input.classList.toggle("searched");
+  }
+
   function toggleButtons() {
     if ($button.classList.contains("shortener")) {
-      $button.classList.add("copy");
-      $button.classList.remove("shortener");
-
-      $spanShortener.classList.add("fade-out");
-      $spanShortener.classList.remove("fade-in");
-
-      $spanCopy.classList.add("fade-in");
-      $spanCopy.classList.remove("fade-out");
-
-      $spanShortener.classList.add("hidden");
-
-      $input.classList.toggle("searched");
+      toggleCopy();
     } else if ($button.classList.contains("copy")) {
-      $button.classList.remove("copy");
-      $button.classList.add("shortener");
-
-      $spanShortener.classList.add("fade-in");
-      $spanShortener.classList.remove("fade-out");
-
-      $spanCopy.classList.add("fade-out");
-      $spanCopy.classList.remove("fade-in");
-
-      $input.classList.toggle("searched");
+      toogleShorterner();
     }
   }
 
   $form.addEventListener("submit", event => {
     event.preventDefault();
 
-    if ($button.classList.contains("shortener")) {
-      console.log(1111);
+    const validValue = $input.value.trim().length > 0;
+
+    if ($button.classList.contains("shortener") && validValue) {
       xhr.open(
         "GET",
         `https://cu8.in/api/?action=short&urls=|https://${$input.value}`,
@@ -59,8 +70,17 @@
       );
 
       xhr.send();
-    } else {
+    } else if (validValue) {
       toggleButtons();
+    }
+  });
+
+  $input.addEventListener("keydown", event => {
+    if (
+      !keysAllowed.includes(event.keyCode) &&
+      $button.classList.contains("copy")
+    ) {
+      toogleShorterner();
     }
   });
 })();
